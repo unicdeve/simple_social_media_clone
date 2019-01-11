@@ -18,7 +18,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static simplesocial/css/master.css %}">
+    <link rel="stylesheet" href="{% static 'simplesocial/css/master.css' %}">
 
 </head>
 <body>
@@ -28,16 +28,16 @@
 
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
-                    <!-- 
-                    <li><a href="{% url 'posts:create' %}" class="btn btn-simple">Post</a></li>
-                    <li><a href="{% url 'groups:all' %}" class="btn btn-simple">Groups</a></li>
-                    <li><a href="{% url 'groups:create' %}" class="btn btn-simple">Create Group</a></li>
-                    -->
+                    
+                    <li><a href="#" class="btn btn-simple">Post</a></li>
+                    <li><a href="#" class="btn btn-simple">Groups</a></li>
+                    <li><a href="#" class="btn btn-simple">Create Group</a></li>
+                    
                     <li><a href="{% url 'accounts:logout' %}" class="btn btn-simple">Log out</a></li>
                 {% else %}
-                        <!--
-                        <li><a href="{% url 'groups:all' %}"class="btn btn-simple">Groups</a></li>
-                        -->
+                        
+                        <li><a href="#" class="btn btn-simple">Groups</a></li>
+                        
                         <li><a href="{% url 'accounts:login' %}" class="btn btn-simple">Log in</a></li>
                         <li><a href="{% url 'accounts:signup' %}" class="btn btn-simple">Sign up</a></li>
                 {% endif %}
@@ -47,7 +47,6 @@
     <div class="container mycontent">
         {% block content %}
 
-            <h1>Welcome to Star Social</h1>
     
         {% endblock content %}
     </div>
