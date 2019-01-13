@@ -34,8 +34,8 @@ class Group(models.Model):
         ordering = ['name']
     
 class GroupMember(models.Model):
-    group = models.ForeignKey(Group, related_name='membership')
-    user = models.ForeignKey(User, related_name='user_name')
+    group = models.ForeignKey(Group, related_name='memberships')
+    user = models.ForeignKey(User, related_name='user_groups')
 
     def __str__(self):
         return self.user.username
